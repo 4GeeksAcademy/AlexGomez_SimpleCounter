@@ -1,12 +1,85 @@
-
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+.container-box{
+    margin: 3px 8rem;
+    background-color: #070707;
+    border-radius: 10px;
+    padding: 22px 9px;
+    min-height: 200px;
+    min-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  .box{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #161616;
+   margin: 10px;
+   padding: 10px;
+   border-radius: 5px;
+  width: 150px;
+   height: 170px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+   border-radius: 20px;
+   margin: 10px;
+  }
+  .watch-cicle{
+   width: 110px;
+   height: 110px;
+   border-radius: 50%;
+   background-color: #f1f1f1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 10px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .watch-cicle::before{
+   content: '';
+   width: 90px;
+   height: 90px;
+   border-radius: 50%;
+   background-color: #020202;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .arrows{
+    display: flex;
+    position: relative;
+  }
+  .watch-arrow-1{
+   position: absolute;
+   left: -77px;
+   top: -5px;
+   border-top-left-radius: 30px;
+   border-bottom-left-radius: 30px;
+   width: 27px;
+   height: 10px;
+   background-color: #ffffff;
+  }
+  .watch-arrow-2{
+    position: absolute;
+    left: -66px;
+    top: -20px;
+   border-top-left-radius: 30px;
+   border-bottom-left-radius: 30px;
+   width: 40px;
+   height: 10px;
+   background-color: #ffffff;
+   transform: rotate(90deg);
+     transform-origin: center;
+  }
+  .Number{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+   font-size: 10em;
+   color: #ffffff;
+   font-weight: bold;
+  }
+  
+  
