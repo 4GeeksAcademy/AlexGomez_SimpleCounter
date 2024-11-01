@@ -4,23 +4,16 @@ const Home = () => {
   const [time, setTime] = useState(0);
   const [operation, setOperation] = useState(true);
   const [IsPlay, setIsPlay] = useState(true);
-
-
-
-  const change = () => {
-    setOperation(!operation);
-  }
-  const toggleTimer = () => {
-    setIsPlay(!IsPlay);
-  }
-
+  const change = () => {  setOperation(!operation); }
+  const toggleTimer = () => {  setIsPlay(!IsPlay); }
 
   useEffect(() => {
         let interval;
+			
 			if (IsPlay) 
 				{
 					interval = setInterval(() => {
-						setTime(prevTime => (operation ? prevTime + 1 : prevTime - 1));
+						setTime(prevTime => ( operation ? prevTime + 1 : prevTime - 1));
 					}, 1000);
 			  }
    		 return () => clearInterval(interval);
@@ -30,7 +23,10 @@ const Home = () => {
 		const hours = String(Math.floor(time / 3600)).padStart(2, '0').split("");
 		const minutes = String(Math.floor((time % 3600) / 60)).padStart(2, '0').split("");
         const seconds = String(time % 60).padStart(2, '0').split("");
-
+  		if (time === 0 && operation==false) {
+			setOperation(true);
+			alert("Time is up");
+		}
   return (
     <>
       <div className="text-center container-box">
@@ -51,9 +47,12 @@ const Home = () => {
       </div>
 	  <div className='d-flex flex-column w-25 justify-content-center align-content-center align-items-md-center mx-auto  gap-3 mt-5'>
 		<label className='text-center fs-2'> TIME <br />
-	  <input type='number' onChange={(e) => setTime(Number(e.target.value))} value={time} /></label>
-      <input type="button" value="Start/Stop" onClick={toggleTimer} />
-      <input type="button" value="Change Operation" onClick={change} />
+	  <input type='number' onChange={(e) => setTime(Number(e.target.value))} value={time} />
+	  <small className='fs-5 -mt-3'>Minutes</small>
+	  </label>
+      <input className={(IsPlay) ? 'btn btn-danger' : 'btn btn-success'} type="button" value="Start/Stop" onClick={toggleTimer} />
+      <input className={operation? 'btn btn-warning':'btn btn-primary'} type="button" value="Change Operation" onClick={change} />
+	  <input className='btn btn-info' type="button" value="Reset" onClick={() => setTime(0)} />
 	  </div>
      
     </>
