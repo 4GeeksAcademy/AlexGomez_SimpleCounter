@@ -18,7 +18,7 @@
    margin: 10px;
    padding: 10px;
    border-radius: 5px;
-  width: 150px;
+   width: 150px;
    height: 170px;
    box-shadow: 0 0 10px rgba(0,0,0,0.1);
    border-radius: 20px;
@@ -61,18 +61,19 @@
    height: 10px;
    background-color: #ffffff;
   }
-  .watch-arrow-2{
+  .watch-arrow-2 {
     position: absolute;
-    left: -66px;
-    top: -20px;
-   border-top-left-radius: 30px;
-   border-bottom-left-radius: 30px;
-   width: 40px;
-   height: 10px;
-   background-color: #ffffff;
-   transform: rotate(90deg);
-     transform-origin: center;
-  }
+    left: -65px;
+    top: -25px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 40px;
+    height: 10px;
+    background-color: #ffffff;
+    transform: rotate(90deg);
+    transform-origin: center; 
+}
+
   .Number{
     display: flex;
     align-content: center;
@@ -82,4 +83,35 @@
    font-weight: bold;
   }
   
-  
+  .btn-danger{
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 5px;
+    margin: 20px;
+    cursor: pointer;
+  }
+  .c-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  button{
+
+    color: #ffffff;
+    padding: 12px 40px !important;
+    border-radius: 5px;
+    margin:0 20px;
+    cursor: pointer;
+    
+  }
+  input{
+    padding: 10px;
+    border-radius: 5px;
+    margin:0 20px;
+  }
